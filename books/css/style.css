@@ -1,0 +1,126 @@
+/* Reset bÃ¡sico para garantir que todos os navegadores comecem do mesmo ponto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Cor de fundo clara para o site */
+    color: #333; /* Texto em um tom escuro */
+}
+
+/* Estilos do Header */
+header {
+    background-color: #35424a; /* Cor de fundo da navbar */
+    color: white;
+    padding: 10px 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #2c3e50; /* Cor ao passar o mouse */
+}
+
+/* Estilos da Barra de Pesquisa */
+.pesquisa-container {
+    margin: 20px 0;
+}
+
+.pesquisa-container input {
+    padding: 10px;
+    width: 100%;
+    max-width: 500px; /* Largura mÃ¡xima do campo de pesquisa */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/* Estilos do Item do Livro */
+.book-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se ajustem em vÃ¡rias linhas */
+    justify-content: space-between; /* Distribui o espaÃ§o entre os itens */
+    gap: 20px; /* EspaÃ§amento entre as divs */
+}
+
+.book-item {
+    flex: 1 1 calc(33.33% - 20px); /* Ajusta para 3 itens por linha */
+    min-width: 250px; /* Define a largura mÃ­nima para manter a responsividade */
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .book-item {
+        flex: 1 1 calc(50% - 20px); /* Dois itens por linha em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .book-item {
+        flex: 1 1 100%; /* Um item por linha em telas pequenas */
+    }
+}
+
+.book-item img {
+    width: 200px; /* Ajusta a largura da imagem para preencher o contÃªiner */
+    height: 300px; /* Define uma altura fixa, ajuste conforme necessÃ¡rio */
+    object-fit: cover; /* Corta a imagem para preencher o contÃªiner mantendo o centro */
+}
+
+.book-item h3 {
+    margin: 10px 0;
+}
+
+.detalhes-livro {
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+/* Estilo do link do livro */
+.link-livro {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3498db; /* Cor do link */
+    text-decoration: none;
+}
+
+.link-livro:hover {
+    text-decoration: underline; /* Sublinhar ao passar o mouse */
+}
+.search-bar {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+#searchInput {
+    padding: 8px;
+    font-size: 16px;
+    flex: 1;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
